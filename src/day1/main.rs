@@ -1,17 +1,15 @@
 use std::io::prelude::*;
 use std::fs::File;
 
-
 fn main() {
 
-	let mut file = File::open("input.txt").unwrap();
-
 	let mut string = String::new();
-
-	file.read_to_string(&mut string);
+	
+	//Under the assumption that no errors will take place,
+	//I have not used try!
+	File::open("input.txt").unwrap().read_to_string(&mut string);
 
 	let floor = string.chars().fold((0, 0, -1), |mut f, c| {
-						
 
 		// The actual floor value
 		f.0 = f.0 + if c == '(' {1} else {-1};
@@ -26,8 +24,10 @@ fn main() {
 	});
 
 	// Part 1
-	println!("Santa's final floor is {:?}", floor);
+	println!("Santa's final destination: {:?}", floor.0);
 
+	//Part 2
+	println!("The position of character when Santa enters basement for first time: {}", floor.2);
 }
 
 
