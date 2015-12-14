@@ -4,7 +4,7 @@ version = "0.1.0"
 author = ["Faizaan <aulisius@gmail.com>"]
 
 [dependencies]
-rust-crypto = "0.2.34"
+pcre = "0.2.1"
 
 [[bin]]
 name ="bin"
