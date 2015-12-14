@@ -1,0 +1,12 @@
+[package]
+name = "adventofcode"
+version = "0.1.0"
+author = ["Faizaan <aulisius@gmail.com>"]
+
+[dependencies]
+rust-crypto = "^0.2"
+
+[[bin]]
+name ="bin"
+path = "main.rs"
+
